@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills — Emeka Obieke</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 5rem;
+    }
+    .skill-card {
+      background: var(--surface); padding: 3rem 2.5rem;
+      border: 2px solid var(--border);
+      position: relative; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .skill-card:hover {
+      border-color: var(--hot);
+      transform: translate(-4px, -4px);
+      box-shadow: 6px 6px 0 var(--border);
+    }
+    .skill-icon { font-size: 2.8rem; margin-bottom: 1.2rem; display: block; }
+    .skill-name { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+    .skill-tag {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.62rem;
+      color: var(--hot); border: 1px solid var(--hot);
+      padding: 0.15rem 0.55rem; letter-spacing: 0.1em; margin-bottom: 1rem;
+    }
+    .skill-desc {
+      font-family: var(--font-mono); font-size: 0.83rem;
+      color: var(--muted); line-height: 1.75; font-weight: 300; margin-bottom: 1.5rem;
+    }
+    .skill-topics { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+    .topic {
+      font-family: var(--font-mono); font-size: 0.68rem;
+      color: var(--text); background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.65rem; letter-spacing: 0.04em;
+    }
+    .skill-bar-label {
+      display: flex; justify-content: space-between;
+      font-family: var(--font-mono); font-size: 0.65rem;
+      color: var(--muted); letter-spacing: 0.1em; margin-bottom: 0.5rem;
+    }
+    .bar-track { height: 3px; background: var(--border); }
+    .bar-fill {
+      height: 100%; background: var(--hot);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 1.1s cubic-bezier(0.16,1,0.3,1);
+    }
+    .bar-fill.animated { transform: scaleX(1); }
+
+    .also-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .also-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border); border: 2px solid var(--accent);
+    }
+    .also-card {
+      background: var(--bg); padding: 1.5rem;
+      transition: background 0.2s;
+    }
+    .also-card:hover { background: var(--surface); }
+    .also-card-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .also-card-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .also-card-status {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      color: var(--muted); letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 900px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .also-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .also-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html">emeka<span>.</span>dev</a>
+  <ul class="nav-links">
+    <li><a href="about.html">about</a></li>
+    <li><a href="skills.html" class="active">skills</a></li>
+    <li><a href="work.html">work</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <p class="page-eyebrow">// 02 — Skills</p>
+  <h1 class="page-title">What I <em>work with.</em></h1>
+  <p class="page-subtitle">The languages and tools that make up my current stack — and what I'm exploring next.</p>
+</div>
+
+<div class="content">
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <span class="skill-icon">🐍</span>
+      <div class="skill-name">Python</div>
+      <span class="skill-tag">CORE LANGUAGE</span>
+      <p class="skill-desc">My first real language and still a favourite. I use Python for scripting, automation, and backend logic. Its readable syntax makes complex ideas feel approachable.</p>
+      <div class="skill-topics">
+        <span class="topic">Scripting</span><span class="topic">Automation</span>
+        <span class="topic">File I/O</span><span class="topic">Functions</span><span class="topic">OOP</span>
+      </div>
+      <div class="skill-bar-label"><span>PROFICIENCY</span><span>80%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+    </div>
+
+    <div class="skill-card reveal" style="transition-delay:0.1s">
+      <span class="skill-icon">🌐</span>
+      <div class="skill-name">HTML</div>
+      <span class="skill-tag">FOUNDATION</span>
+      <p class="skill-desc">The backbone of every web page I build. I write clean, semantic HTML that prioritises accessibility and structure — good markup makes everything easier.</p>
+      <div class="skill-topics">
+        <span class="topic">Semantic HTML5</span><span class="topic">Forms</span>
+        <span class="topic">Accessibility</span><span class="topic">SEO basics</span>
+      </div>
+      <div class="skill-bar-label"><span>PROFICIENCY</span><span>90%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill-card reveal" style="transition-delay:0.05s">
+      <span class="skill-icon">🎨</span>
+      <div class="skill-name">CSS</div>
+      <span class="skill-tag">STYLING</span>
+      <p class="skill-desc">Where design meets code. I use CSS to create responsive, beautiful layouts — from Flexbox and Grid to animations and custom properties.</p>
+      <div class="skill-topics">
+        <span class="topic">Flexbox</span><span class="topic">Grid</span>
+        <span class="topic">Animations</span><span class="topic">Responsive</span><span class="topic">Variables</span>
+      </div>
+      <div class="skill-bar-label"><span>PROFICIENCY</span><span>82%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+    </div>
+
+    <div class="skill-card reveal" style="transition-delay:0.15s">
+      <span class="skill-icon">⚡</span>
+      <div class="skill-name">JavaScript</div>
+      <span class="skill-tag">INTERACTIVITY</span>
+      <p class="skill-desc">The language that makes web pages come alive. I use JS for DOM manipulation, event handling, and dynamic interfaces. Levelling up on modern ES6+ features.</p>
+      <div class="skill-topics">
+        <span class="topic">DOM</span><span class="topic">Events</span>
+        <span class="topic">ES6+</span><span class="topic">Fetch API</span><span class="topic">Arrays</span>
+      </div>
+      <div class="skill-bar-label"><span>PROFICIENCY</span><span>70%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <div class="also-title">Also Exploring</div>
+    <div class="also-grid">
+      <div class="also-card"><div class="also-card-icon">⚛️</div><div class="also-card-name">React</div><div class="also-card-status">Learning</div></div>
+      <div class="also-card"><div class="also-card-icon">🗄️</div><div class="also-card-name">SQL</div><div class="also-card-status">Exploring</div></div>
+      <div class="also-card"><div class="also-card-icon">🔧</div><div class="also-card-name">Git &amp; GitHub</div><div class="also-card-status">Practising</div></div>
+      <div class="also-card"><div class="also-card-icon">🖥️</div><div class="also-card-name">Node.js</div><div class="also-card-status">On the radar</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-text">© 2026 <span>Emeka Obieke</span></p>
+  <a href="../index.html" class="footer-back">← Back to Home</a>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+  reveals.forEach(el => obs.observe(el));
+  const barObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.querySelectorAll('.bar-fill').forEach((b,i) => setTimeout(() => b.classList.add('animated'), i*120)); });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.skill-card').forEach(el => barObs.observe(el));
+</script>
+</body>
+</html>

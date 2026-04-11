@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Emeka Obieke</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .about-grid {
+      display: grid; grid-template-columns: 3fr 2fr; gap: 5rem; align-items: start;
+    }
+    .about-text p {
+      font-family: var(--font-mono); font-size: 0.92rem;
+      color: var(--muted); line-height: 1.95; font-weight: 300; margin-bottom: 1.4rem;
+    }
+    .about-text p strong { color: var(--text); font-weight: 600; }
+    .about-text a { color: var(--hot); }
+
+    .info-card {
+      background: var(--surface); border: 2px solid var(--accent);
+      padding: 1.8rem; position: sticky; top: 7rem;
+      box-shadow: 6px 6px 0 var(--border);
+    }
+    .info-card-title {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      color: var(--hot); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.2rem;
+    }
+    .info-row {
+      display: flex; flex-direction: column; gap: 0.2rem;
+      padding: 0.85rem 0; border-bottom: 1px solid var(--border);
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label {
+      font-family: var(--font-mono); font-size: 0.62rem;
+      color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .info-value { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text); }
+    .info-value a { color: var(--hot); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+
+    .timeline { margin-top: 4rem; }
+    .timeline-title { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.8rem; }
+    .tl-item {
+      display: flex; gap: 2rem; padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .tl-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--border); border: 2px solid var(--border);
+      flex-shrink: 0; margin-top: 5px; transition: background 0.2s, border-color 0.2s;
+    }
+    .tl-item:hover .tl-dot { background: var(--hot); border-color: var(--hot); }
+    .tl-year {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--muted); min-width: 38px; margin-top: 3px;
+    }
+    .tl-content-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .tl-content-desc {
+      font-family: var(--font-mono); font-size: 0.8rem;
+      color: var(--muted); line-height: 1.7; font-weight: 300;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .info-card { position: static; box-shadow: 4px 4px 0 var(--border); }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html">emeka<span>.</span>dev</a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">about</a></li>
+    <li><a href="skills.html">skills</a></li>
+    <li><a href="work.html">work</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <p class="page-eyebrow">// 01 — About Me</p>
+  <h1 class="page-title">Who I <em>am.</em></h1>
+  <p class="page-subtitle">Developer. Learner. Builder. A bit obsessed with clean code and good design.</p>
+</div>
+
+<div class="content">
+  <div class="about-grid">
+    <div>
+      <div class="about-text reveal">
+        <p>Hey, I'm <strong>Emeka Obieke</strong> — a developer with a deep passion for building things on the web. I write code in <strong>Python, HTML, CSS, and JavaScript</strong>, and every day I'm pushing to go deeper and build more.</p>
+        <p>My journey started with curiosity: wondering how websites worked, how apps were built, how a few lines of text could become something interactive and alive. That curiosity turned into obsession, and now it's my craft.</p>
+        <p>I'm at the exciting early stage of my career — the fundamentals are solid, and I'm actively working toward shipping my first real projects. I believe the best way to learn is by <strong>doing</strong>, so I build, break things, fix them, and repeat.</p>
+        <p>I'm open to junior developer roles, collaborations, and freelance work. If you're building something cool, <a href="contact.html">let's talk</a>.</p>
+      </div>
+
+      <div class="timeline reveal" style="transition-delay:0.1s">
+        <div class="timeline-title">My Journey</div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">Now</div>
+          <div>
+            <div class="tl-content-title">Building &amp; Growing</div>
+            <div class="tl-content-desc">Actively working on projects, deepening my Python &amp; JavaScript skills, and looking for my first professional opportunity.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024</div>
+          <div>
+            <div class="tl-content-title">Learned JavaScript &amp; CSS</div>
+            <div class="tl-content-desc">Dove into front-end development — DOM manipulation, responsive layouts, and interactive design.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2023</div>
+          <div>
+            <div class="tl-content-title">Started with Python &amp; HTML</div>
+            <div class="tl-content-desc">Wrote my first scripts, built my first web pages, and got hooked on the craft of coding.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:0.15s">
+      <div class="info-card">
+        <div class="info-card-title">// Quick Info</div>
+        <div class="info-row">
+          <span class="info-label">Name</span>
+          <span class="info-value">Emeka Obieke</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email</span>
+          <span class="info-value"><a href="mailto:obiekejolomi@gmail.com">obiekejolomi@gmail.com</a></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">GitHub</span>
+          <span class="info-value"><a href="https://github.com/Emeka199" target="_blank">Emeka199</a></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Focus</span>
+          <span class="info-value">Web Development</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Status</span>
+          <span class="info-value" style="color:var(--hot);">● Open to work</span>
+        </div>
+      </div>
+      <div style="margin-top:1.4rem;display:flex;flex-direction:column;gap:0.8rem;">
+        <a href="skills.html" class="btn-primary" style="text-align:center;">View My Skills →</a>
+        <a href="contact.html" class="btn-outline" style="text-align:center;">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-text">© 2026 <span>Emeka Obieke</span></p>
+  <a href="../index.html" class="footer-back">← Back to Home</a>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+  const reveals = document.querySelectorAll('.reveal');
+  new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 }).observe
+  const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+  reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

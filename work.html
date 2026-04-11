@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work — Emeka Obieke</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .empty-state {
+      border: 2px dashed var(--border); padding: 4.5rem 3rem;
+      text-align: center; margin-bottom: 4rem; background: var(--surface);
+    }
+    .empty-icon { font-size: 3rem; margin-bottom: 1.2rem; }
+    .empty-title { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.8rem; }
+    .empty-text {
+      font-family: var(--font-mono); font-size: 0.83rem;
+      color: var(--muted); line-height: 1.85; max-width: 440px; margin: 0 auto 2.2rem;
+    }
+
+    .pipeline-title { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .project-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 4rem;
+    }
+    .project-card {
+      background: var(--surface); padding: 2.2rem 2rem;
+      border: 2px solid var(--border);
+      position: relative; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translate(-3px, -3px);
+      box-shadow: 5px 5px 0 var(--border);
+    }
+    .project-num {
+      font-family: var(--font-mono); font-size: 0.62rem;
+      color: var(--muted); letter-spacing: 0.15em; margin-bottom: 1rem;
+    }
+    .project-title { font-weight: 800; font-size: 1rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+    .project-desc {
+      font-family: var(--font-mono); font-size: 0.78rem;
+      color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 1.2rem;
+    }
+    .project-badge {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.6rem;
+      padding: 0.2rem 0.6rem; letter-spacing: 0.12em;
+      color: var(--hot); border: 1px solid var(--hot);
+    }
+    .project-badge.soon { color: var(--muted); border-color: var(--border); }
+
+    .github-cta {
+      background: var(--accent); padding: 3rem;
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 2rem; flex-wrap: wrap;
+    }
+    .github-cta h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.4rem; color: #faf6ef; }
+    .github-cta p { font-family: var(--font-mono); font-size: 0.82rem; color: rgba(250,246,239,0.65); font-weight: 300; }
+    .btn-github {
+      border: 2px solid #faf6ef; color: #faf6ef;
+      padding: 0.75rem 1.8rem;
+      font-family: var(--font-mono); font-size: 0.82rem;
+      text-decoration: none; letter-spacing: 0.05em;
+      transition: background 0.2s, color 0.2s; display: inline-block; white-space: nowrap;
+    }
+    .btn-github:hover { background: #faf6ef; color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .project-grid { grid-template-columns: 1fr; }
+      .github-cta { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html">emeka<span>.</span>dev</a>
+  <ul class="nav-links">
+    <li><a href="about.html">about</a></li>
+    <li><a href="skills.html">skills</a></li>
+    <li><a href="work.html" class="active">work</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <p class="page-eyebrow">// 03 — Work</p>
+  <h1 class="page-title">Things I've <em>built.</em></h1>
+  <p class="page-subtitle">No shipped projects yet — but the builds are coming. Here's what's in the pipeline.</p>
+</div>
+
+<div class="content">
+  <div class="empty-state reveal">
+    <div class="empty-icon">🚀</div>
+    <div class="empty-title">The portfolio is warming up.</div>
+    <p class="empty-text">I'm actively building my first projects using Python, HTML, CSS, and JavaScript. Every line of code is a step closer. Follow my GitHub to watch it happen in real time.</p>
+    <a href="https://github.com/Emeka199" target="_blank" class="btn-primary">Follow on GitHub →</a>
+  </div>
+
+  <div class="reveal" style="transition-delay:0.1s">
+    <div class="pipeline-title">What's in the pipeline</div>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-title">Python Automation Script</div>
+        <div class="project-desc">A utility tool that automates a repetitive task — saving time through clean, readable Python code.</div>
+        <span class="project-badge">IN PROGRESS</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-title">Personal Web App</div>
+        <div class="project-desc">A browser-based app built with HTML, CSS, and vanilla JavaScript — putting the front-end stack to work.</div>
+        <span class="project-badge soon">PLANNING</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-title">Portfolio v2</div>
+        <div class="project-desc">An upgraded portfolio with real project case studies, live demos, and a blog section for writing about code.</div>
+        <span class="project-badge soon">COMING SOON</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-title">CSS Experiments</div>
+        <div class="project-desc">A collection of CSS art, micro-interactions, and layout challenges — learning by making things look interesting.</div>
+        <span class="project-badge soon">IDEA</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">05</div>
+        <div class="project-title">JS Mini Games</div>
+        <div class="project-desc">Small browser games with vanilla JS — a fun way to solidify logic, loops, and event handling.</div>
+        <span class="project-badge soon">IDEA</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">06</div>
+        <div class="project-title">Open Source Contribution</div>
+        <div class="project-desc">First pull request to an open-source project — starting small, learning the workflow, leaving a mark.</div>
+        <span class="project-badge soon">GOAL</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="github-cta reveal" style="transition-delay:0.15s">
+    <div>
+      <h3>Watch it happen on GitHub</h3>
+      <p>All code lives at github.com/Emeka199 — follow along as projects go from idea to reality.</p>
+    </div>
+    <a href="https://github.com/Emeka199" target="_blank" class="btn-github">github.com/Emeka199 →</a>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-text">© 2026 <span>Emeka Obieke</span></p>
+  <a href="../index.html" class="footer-back">← Back to Home</a>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.08 });
+  reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
